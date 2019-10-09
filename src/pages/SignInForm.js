@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import LoginData from '../Login.json'
+import DashData from '../dashboardpage.json'
+
 
 class SignInForm extends Component {
     constructor() {
@@ -26,6 +29,15 @@ class SignInForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        // alert(LoginData.username)
+        if((this.state.email == LoginData.username) && (this.state.password == LoginData.password)) {
+          alert('working')
+        } else {
+          alert(DashData)
+          this.props.history.push("/dashboard");
+        }
+        
+
 
         console.log('The form was submitted with the following data:');
         console.log(this.state);
@@ -46,7 +58,10 @@ class SignInForm extends Component {
               </div>
 
               <div className="FormField">
-                  <button className="FormField__Button mr-20">Sign In</button> <Link to="/" className="FormField__Link">Create an account</Link>
+                  <button
+                  // onClick={window.alert('hiii')}
+                  className="FormField__Button mr-20">Sign In</button>
+                   {/* <Link to="/" className="FormField__Link">Create an account</Link> */}
               </div>
             </form>
           </div>
