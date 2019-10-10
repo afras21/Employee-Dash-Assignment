@@ -6,6 +6,7 @@
 
 .App__Aside {
   width: 50%;
+  display: none;
   background-color: #66DAC7;
 }
 
@@ -36,6 +37,12 @@
   background-color: #2E4158;
   padding: 25px 40px;
   overflow: auto;
+}
+
+.LoginHeader{
+  height: 130px;
+  font-size: 41px;
+  font-family: sans-serif;
 }
 
 .PageSwitcher {

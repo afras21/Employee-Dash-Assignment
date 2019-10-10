@@ -30,10 +30,9 @@ class SignInForm extends Component {
         e.preventDefault();
         // alert(LoginData.username)
         if((this.state.email == LoginData.username) && (this.state.password == LoginData.password)) {
-          alert('working')
-        } else {
-          alert(DashData)
           this.props.history.push("/dashboard");
+        } else {
+          alert('Please enter valid credentials')
         }
         
 
@@ -44,7 +43,11 @@ class SignInForm extends Component {
 
     render() {
         return (
-        <div className="FormCenter">
+        <div style={{padding: '5%'}}>
+          <div className="LoginHeader">
+          Empify Login
+            </div>
+                  <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
             <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
@@ -64,6 +67,8 @@ class SignInForm extends Component {
               </div>
             </form>
           </div>
+        </div>
+
         );
     }
 }
