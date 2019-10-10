@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import LoginData from '../Login.json'
 import DashData from '../dashboardpage.json'
 
-
 class SignInForm extends Component {
     constructor() {
         super();
